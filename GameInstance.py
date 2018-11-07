@@ -8,6 +8,7 @@ class GameInstance():
 		self.sessionTime = 0
 		self.sessionStart = None
 		self.sessionEnd = None
+		self.currentLocation = 'the castle'
 		self.startSessionTimer()
 		self.myWords = ''
 
@@ -44,9 +45,17 @@ class GameInstance():
 				me.checkInventory()
 			elif(myWords == "go fishing"):
 				me.goFishing()
+			elif(myWords == "travel away"):
+				print("so you don't want to stay at " + self.currentLocation + "...")
+				me.listDestinations()
+			elif(myWords == "the castle" or myWords == "home"
+			or myWords == "the woods" or myWords == "the river"
+			or myWords == "the market"):
+				self.currentLocation = myWords
+				print("you went to " + myWords)
 			elif(myWords != ''):
 				print("sorry, I didn't catch that")
 			
-			self.myWords = input('type!')	
+			self.myWords = input('-->')	
 
 	
