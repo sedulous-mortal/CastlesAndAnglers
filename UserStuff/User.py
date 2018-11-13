@@ -12,8 +12,6 @@ class User():
 		"the woods"]
 
 	def showHealth(self):
-		print('trying')
-		print('tryingg')
 		print(str(self.healthPoints))
 
 	def healUp(self, amount):
