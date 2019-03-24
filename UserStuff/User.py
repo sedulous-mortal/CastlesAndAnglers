@@ -8,7 +8,7 @@ class User():
 		self.maxHealth = 10 * self.level
 		self.healthPoints = self.maxHealth - 1
 		self.userInventory = UserInventory()
-		self.destinationList = ["the river", "home", "the castle", "the market", 
+		self.destinationList = ["the river", "home", "the castle", "the market",
 		"the woods"]
 
 	def showHealth(self):
@@ -26,20 +26,29 @@ class User():
 
 	def takeDamage(self, amount):
 		if (self.healthPoints > 0):
-			self.healthpoints = self.healthPoints - amount
+			self.healthPoints = self.healthPoints - amount
 		elif (self.healthPoints == 0):
 			print('You are already dead and can take no more damage')
 
 	def checkInventory(self):
 		print('Inventory contains: ' + str(self.userInventory.listItems()))
 
-	def goFishing(self): 
+	def goFishing(self):
 		FishingActivities.goFishing(self)
 
 	def addToInventory(self, item):
 		self.userInventory.inventory.append(item)
 		print(str(item) + ' added to inventory.')
-	
+
 	def listDestinations(self):
 		print("pick a location to go to:")
 		print(self.destinationList)
+
+	def showHelpMenu(self):
+		print("Here's what you can do:")
+		print("show health")
+		print("heal up")
+		print("go fishing")
+		print("travel away")
+		print("show inventory")
+		print("quit")

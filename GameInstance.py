@@ -18,6 +18,7 @@ class GameInstance():
 		me.inventory = UserInventory()
 		me.inventory.populate()
 		self.playGame(me)
+		me.showHelpMenu()
 
 	def startSessionTimer(self):
 		self.sessionStart = datetime.datetime.now()
@@ -35,6 +36,8 @@ class GameInstance():
 			myWords = self.myWords
 			if(myWords == "show health"):
 				me.showHealth()
+			elif(myWords == "help"):
+				me.showHelpMenu()
 			elif(myWords == "heal up"):
 				me.healUp(1)
 			elif(myWords == "take damage"):
@@ -54,8 +57,7 @@ class GameInstance():
 				self.currentLocation = myWords
 				print("you went to " + myWords)
 			elif(myWords != ''):
-				print("sorry, I didn't catch that")
-			
-			self.myWords = input('-->')	
+				print("Sorry, I didn't catch that.")
+				print("You can quit by typing quit.")
 
-	
+			self.myWords = input('-->')
