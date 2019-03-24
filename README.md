@@ -1,6 +1,14 @@
 # Castles And Anglers
     A text-based Python 3 roleplaying game.
 
+# How to Play
+    - git clone the repo
+    - navigate into the CastlesAndAnglers folder
+    - ensure you have python3 by running python3 --version
+        - if you don't have it, get python3 by running `npm install python` or `brew install python`
+    - run `python3 main.py`
+    
+
 ## Actions You Can Take Anytime
     - show health
     - heal up

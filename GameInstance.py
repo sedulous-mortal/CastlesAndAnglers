@@ -18,10 +18,10 @@ class GameInstance():
 		me.inventory = UserInventory()
 		me.inventory.populate()
 		self.playGame(me)
-		me.showHelpMenu()
 
 	def startSessionTimer(self):
 		self.sessionStart = datetime.datetime.now()
+		me.showHelpMenu()
 
 	def printSessionTime(self):
 			self.sessionEnd = datetime.datetime.now()

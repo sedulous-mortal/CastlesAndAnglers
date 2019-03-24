@@ -16,7 +16,7 @@ from GameInstance import GameInstance
 def mainFunc():
 	myGame = GameInstance()
 	print('Welcome to Crafters Castle!')
-	print('To play, please type in an activity, such as "show health" or "session time" \n')
+	print('To play, please type in an activity. \n')
 	myGame.startGame()
 
 mainFunc()
