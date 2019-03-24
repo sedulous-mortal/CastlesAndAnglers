@@ -21,7 +21,6 @@ class GameInstance():
 
 	def startSessionTimer(self):
 		self.sessionStart = datetime.datetime.now()
-		me.showHelpMenu()
 
 	def printSessionTime(self):
 			self.sessionEnd = datetime.datetime.now()
