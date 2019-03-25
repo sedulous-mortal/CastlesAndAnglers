@@ -39,6 +39,8 @@ class GameInstance():
 				me.showHelpMenu()
 			elif(myWords == "heal up"):
 				me.healUp(1)
+			elif (myWords == "eat a fish"):
+				me.eatFish()
 			elif(myWords == "take damage"):
 				me.takeDamage(1)
 			elif(myWords == "session time"):
