@@ -1,5 +1,6 @@
 from UserStuff.UserInventory import UserInventory
 from Activities.Fishing.FishingActivities import FishingActivities
+import Activities.Fishing.Fishes #makes the list of fish available
 
 class User():
 	def __init__(self):
@@ -40,6 +41,21 @@ class User():
 		self.userInventory.inventory.append(item)
 		print(str(item) + ' added to inventory.')
 
+# Eat Fish function - asks the user which fish they want to eat.
+# If the fish is in their inventory and it is a valid name of
+# a fish, the fish will be removed from their inventory and
+# HP will increase by 1. - Josh 3/24/19
+	def eatFish(self):
+		fish = input("Which fish would you like to eat?")
+		if fish in self.userInventory.inventory:
+			if fish in Activities.Fishing.Fishes.Fishes:
+				self.userInventory.inventory.remove(fish)
+				self.healUp(1)
+			else:
+				print("Sorry, that's not a fish!")
+		else:
+			print("Sorry, you don't have that fish!")
+
 	def listDestinations(self):
 		print("pick a location to go to:")
 		print(self.destinationList)
@@ -49,6 +65,7 @@ class User():
 		print("show health")
 		print("heal up")
 		print("go fishing")
+		print("eat a fish")
 		print("travel away")
 		print("show inventory")
 		print("quit")
