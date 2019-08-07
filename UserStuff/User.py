@@ -46,15 +46,18 @@ class User():
 # a fish, the fish will be removed from their inventory and
 # HP will increase by 1. - Josh 3/24/19
 	def eatFish(self):
-		fish = input("Which fish would you like to eat?")
-		if fish in self.userInventory.inventory:
-			if fish in Activities.Fishing.Fishes.Fishes:
-				self.userInventory.inventory.remove(fish)
-				self.healUp(1)
-			else:
-				print("Sorry, that's not a fish!")
+		if self.healthPoints == self.maxHealth: 
+			print("You can't eat a fish because you're already full!")
 		else:
-			print("Sorry, you don't have that fish!")
+			fish = input("Which fish would you like to eat?")
+			if fish in self.userInventory.inventory:
+				if fish in Activities.Fishing.Fishes.Fishes:
+					self.userInventory.inventory.remove(fish)
+					self.healUp(1)
+				else:
+					print("Sorry, that's not a fish!")
+			else:
+				print("Sorry, you don't have that fish!")
 
 	def listDestinations(self):
 		print("pick a location to go to:")
