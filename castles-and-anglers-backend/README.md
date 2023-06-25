@@ -4,7 +4,7 @@
 # How to Play
     - git clone the repo
     - navigate into the CastlesAndAnglers folder
-    - ensure you have python3 by running python3 --version
+    - ensure you have python3 by running python3 --version and/or python --version
         - if you don't have it, get python3 by running `npm install python` or `brew install python`
     - run `python3 main.py`
     
